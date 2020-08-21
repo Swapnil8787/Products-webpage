@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.img-thumbnail{
+    padding: 0;
+}
+.caption-full{
+    padding: 9px;
+}
+.well{
+    background-color: rgb(241, 237, 237);
+    padding: 1rem;
+    border-radius: 10px;
+}
+#rightnav{
+    margin-left: 70rem;
+}
+
+#delete{
+    display: inline;
+}
+#edit_cmt{
+    display: inline;
+}

@@ -1,0 +1,32 @@
+<%- include ('../partials/header') %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="img-thumbnail">
+                    <img src="<%= Prod.image %>" alt="" class="img-responsive">
+                    <div class="caption-full">
+                        <div>
+                            <h4 class="float-left">
+                                <a href="#">
+                                    <%= Prod.name %>
+                                </a>
+                            </h4>
+                            <br><br>
+                        </div>
+                        <div>
+                            <p>
+                                <%= Prod.description %>
+                            </p>
+                        </div>
+                        <a href="/products/<%= Prod._id%>/edit" class="btn btn-sm btn-primary">Edit Product</a>
+
+                        <form id="delete" action="/products/<%= Prod._id%>?_method=DELETE" method="POST">
+                            <button class="btn btn-sm btn-danger">Delete Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ('../partials/footer') %>

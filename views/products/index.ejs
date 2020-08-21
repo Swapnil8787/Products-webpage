@@ -1,0 +1,38 @@
+<%- include ('../partials/header') %>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1> XYZ.inc welcomes you!</h1>
+                <p>These are some of the products we make</p>
+                <p>
+                    <a href="/products/new" class="btn btn-primary">Create Products</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+            <% products.forEach(function(camp){ %>
+                <% if(camp.flag =="yes"){%>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card my-2">
+                            <img src="<%=camp.image%>" alt="camp" class="img-thumbnail">
+                            <div class="caption">
+                                <h4>
+                                    <%=camp.name%>
+                                </h4>
+                            </div>
+                            <div>
+                                <%= (camp.description).substring(0,20) %>..</div>
+                            <p>
+                                <a href="/products/<%= camp._id%>" class="btn btn-primary">More Info</a>
+                            </p>
+                        </div>
+
+                    </div>
+                    <%}%>
+                        <% }) %>
+        </div>
+    </div>
+
+    <%- include ('../partials/footer') %>

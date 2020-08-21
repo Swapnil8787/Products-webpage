@@ -1,0 +1,19 @@
+<%- include ('../partials/header') %>
+
+    <div class="container" style="text-align:center;">
+        <h1 style="text-align:center;">Edit :
+            <%= product.name %>
+        </h1>
+        <div style="width:40%; margin:20px auto;">
+            <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+                <input class="form-control my-2" type="text" value="<%= product._id %>">
+                <input class="form-control my-2" type="text" name="product[name]" value=" <%= product.name %>">
+                <input class="form-control my-2" type="text" name="product[image]" value=" <%= product.image %>">
+                <input class="form-control my-2" type="text" name="product[description]" value=" <%= product.description %>">
+                <button class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+        <a href="/products">Go Back</a>
+    </div>
+
+    <%- include ('../partials/footer') %>

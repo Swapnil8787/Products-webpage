@@ -1,0 +1,16 @@
+<%- include ('../partials/header') %>
+
+    <div class="container" style="text-align:center;">
+        <h1 style="text-align:center;">Create new Product</h1>
+        <div style="width:40%; margin:20px auto;">
+            <form action="/products" method="POST">
+                <input class="form-control my-2" type="text" name="name" placeholder="Name">
+                <input class="form-control my-2" type="text" name="image" placeholder="Image Url">
+                <input class="form-control my-2" type="text" name="description" placeholder="Description">
+                <button class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+        <a href="/products">Go Back</a>
+    </div>
+
+    <%- include ('../partials/footer') %>
